@@ -2,18 +2,13 @@
 let num1;
 let num2;
 let op;
+let num;
+let displayVal = '';
 
 const keys = document.querySelector('#keys');
-
-//creating keys for the calc
-for(let i = 0; i < 10; i++){
-    const div = document.createElement('div');
-    div.textContent = i;
-    div.classList = "key";
-    keys.insertBefore(div, keys.children[0]);
-}
-
 const equalBtn = document.createElement('button');
+const display = document.querySelector('#display');
+const key = document.querySelectorAll('.key');
 
 
 /*HERE ARE ALL THE FUNCTIONS*/ 
@@ -51,8 +46,21 @@ function operate(num1, num2, op){
     }
 }
 
+function input(num){
+    displayVal = displayVal.concat(num); 
+    return displayVal;
+}
+
+function addValue(e){
+    display.setAttribute('value', input(e.target.textContent));
+}
+
 
 /*Here is the DOM Manipulation */
 equalBtn.textContent = 'CLR';
-equalBtn.classList = "key"
-keys.appendChild(equalBtn);
+equalBtn.classList = "key clr"
+keys.insertBefore(equalBtn, keys.children[3]);
+
+
+//event to access the keys
+key.forEach(() => addEventListener('click', addValue));
