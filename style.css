@@ -41,7 +41,23 @@ div .key {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 25%;
-    width: 25%;
+    flex: 1 0 25%;
     border: 1px solid black;
+}
+
+div #opr{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+    border: 2px solid red;
+    order: 2;
+}
+div #specialOpr{
+    display: flex;
+    height: 50px;
+}
+
+div #equal {
+    flex: 2 0 50%;
 }
