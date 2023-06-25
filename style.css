@@ -10,23 +10,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ccd5ae;
 }
 
 #mainContainer {
     display: flex;
     flex-direction: column;
-    height: 400px;
-    width: 350px;
-    border: 1px solid black;
+    height: 500px;
+    width: 400px;
+    border: 1px solid #faedcd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d4a373;
 }
 
 #display {
     width: 100%;
     height : 100px;
-    border: 1px solid black;
+    border: 10px solid #faedcd;
+    padding: 10px;
     text-align: right;
-    padding: 5px;
-    font-size: large;
+    font-size: xxx-large;
+    background-color: #e9edc9;
+    border-radius: 5px;
 }
 
 #keys {
@@ -35,6 +41,8 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    border-radius: 5px;
+    border-top: 7px solid #d4a373;
 }
 
 div .key {
@@ -42,7 +50,9 @@ div .key {
     align-items: center;
     justify-content: center;
     flex: 1 0 25%;
-    border: 1px solid black;
+    border: 3px solid #d4a373;
+    background-color: #e9edc9;
+    font-size: xx-large;
 }
 
 div #opr{
@@ -50,14 +60,30 @@ div #opr{
     flex-wrap: wrap;
     flex-direction: row;
     flex: 1;
-    border: 2px solid red;
     order: 2;
+    border: 3px solid #faedcd;
+
 }
 div #specialOpr{
     display: flex;
-    height: 50px;
+    height: 70px; 
+    border: 5px solid #faedcd;   
 }
 
 div #equal {
     flex: 2 0 50%;
+    background-color: #faedcd;
+}
+
+div .specialOpr{
+    border: 5px solid #faedcd;   
+    background-color: #fefae0;
+}
+
+div .operation{
+    background-color: #fefae0;
+}
+
+div #del, div .clr{
+    flex: 2 1 35%;
 }

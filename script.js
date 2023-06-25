@@ -143,7 +143,7 @@ function keyPress(e){
 
 /*Here is the DOM Manipulation */
 clrBtn.textContent = 'CLR';
-clrBtn.classList = "key specialOpr"
+clrBtn.classList = "key specialOpr clr"
 specialOpr.insertBefore(clrBtn, specialOpr.children[0]);
 
 
